@@ -10,14 +10,14 @@ def index():
 
 
 
-@app.route('/mazzameras', methods=['POST'])
-def upload_file():
-    image = request.files['image']
-    filename = secure_filename(image.filename)
-    url = os.path.join(APP_ROOT,filename)
-
-    image.save(url)
-    return url
+# @app.route('/mazzameras', methods=['POST'])
+# def upload_file():
+#     image = request.files['image']
+#     filename = secure_filename(image.filename)
+#     url = os.path.join(APP_ROOT,filename)
+#
+#     image.save(url)
+#     return url
 
 
 if __name__ == "__main__":
