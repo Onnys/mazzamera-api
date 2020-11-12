@@ -1,9 +1,8 @@
 from flask import  Flask, request, url_for
 import os
-from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
-#APP_ROOT = os.path.dirname(os.path.abspath(__file__))
+APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 @app.route('/')
 def index():
