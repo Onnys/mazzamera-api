@@ -14,7 +14,7 @@ def index():
 def upload_file():
     image = request.files['image']
     filename = secure_filename(image.filename)
-    url = os.path.join(APP_ROOT,filename) 
+    url = os.path.join(APP_ROOT,filename)
     
     image.save(url)
     return url
