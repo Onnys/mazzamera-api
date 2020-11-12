@@ -3,7 +3,8 @@ import os
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
-APP_ROOT = os.path.dirname(os.path.abspath(__file__))
+#APP_ROOT = os.path.dirname(os.path.abspath(__file__))
+
 @app.route('/')
 def index():
     return 'Hello world'
@@ -15,7 +16,7 @@ def upload_file():
     image = request.files['image']
     filename = secure_filename(image.filename)
     url = os.path.join(APP_ROOT,filename)
-    
+
     image.save(url)
     return url
 
