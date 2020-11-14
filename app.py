@@ -1,7 +1,7 @@
 from flask import  Flask, request, send_from_directory, safe_join, abort , jsonify
 import os
 
-APP_ROOT = (os.path.dirname(os.path.abspath(__file__))+'/static')
+APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 
 def create_app(test_config=None):
@@ -24,7 +24,7 @@ def create_app(test_config=None):
     @app.route('/get-mazzamera', methods=['GET'])
     def get_image():
         try:
-            return send_from_directory(directory='static',filename='production.png')
+            return send_from_directory(directory='app',filename='production.png')
 
         except FileNotFoundError:
             abort(404)
