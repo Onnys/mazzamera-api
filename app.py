@@ -24,7 +24,7 @@ def create_app(test_config=None):
     @app.route('/get-mazzamera', methods=['GET'])
     def get_image():
         try:
-            return send_from_directory(directory='static',filename='Phoenix Rdc - Vencedor.mp4')
+            return send_from_directory(directory='static',filename='production.png')
 
         except FileNotFoundError:
             abort(404)
