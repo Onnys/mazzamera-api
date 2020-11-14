@@ -18,7 +18,8 @@ def create_app(test_config=None):
         image.save(url)
         return jsonify({
             'success': True,
-            'file_name':image.filename,
+            'file_name':url+image.filename,
+
         })
 
     @app.route('/get-mazzamera', methods=['GET'])
