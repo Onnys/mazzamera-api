@@ -1,7 +1,7 @@
 from flask import  Flask, request, send_from_directory, safe_join, abort , jsonify
 import os
 
-APP_ROOT = os.path.dirname(os.path.abspath(__file__))
+APP_ROOT = os.path.dirname(__file__)
 
 
 def create_app(test_config=None):
